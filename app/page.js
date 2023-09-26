@@ -10,9 +10,9 @@ import Project from "./components/Project";
 export default function Home() {
   return (
     <>
-      <main className=" bg-slate-500 h-fit w-screen relative flex justify-center flex-col items-center overflow-hidden">
+      <main className=" bg-slate-500 h-fit w-fit relative flex justify-center flex-col items-center overflow-hidden">
         {/* navigation */}
-        <Header/>
+        {/* <Header/> */}
         <Hero/>
         <About/>
         <Experience/>

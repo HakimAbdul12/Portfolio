@@ -13,13 +13,13 @@ const Hero = () => {
   return (
     <div
     id="home"
-      className="h-[90vh] w-full bg-cover bg-no-repeat"
+      className="h-screen w-full bg-cover bg-no-repeat"
       style={{
         backgroundImage: `url('https://img.freepik.com/free-photo/close-up-image-programer-working-his-desk-office_1098-18707.jpg?w=1060&t=st=1695313283~exp=1695313883~hmac=6b5e4f2b6f585b01e2391732518fc81ca14eeb3128d5f35521c1466ae882b925')`,
       }}
     >
-      <div className="w-full flex justify-center items-end h-full  bg-gradient-to-tr from-[#002b6b]/50 via-[#10011A]/50  to-[#070643]/50">
-        <div className="h-[60vh] w-1/3 space-y-20 pt-12">
+      <div className="w-full flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row 2xl:flex-row  justify-center items-end h-fit  bg-gradient-to-tr from-[#002b6b]/50 via-[#10011A]/50  to-[#070643]/50 overflow-hidden">
+        <div className="h-fit basis-full space-y-20 pt-12">
           <h1 className="text-4xl text-white">
             🙋‍♂️ {`Hi, I'm`}{" "}
             <span className="italic text-yellow-500 font-semibold">Hakim</span>
@@ -30,10 +30,11 @@ const Hero = () => {
             `}
           </p>
         </div>
-        <div className=" h-[70vh] w-1/3 relative pt-12">
+        <div className=" h-[fit] basis-full relative pt-12">
           <Image
             src={"/Hakim1.png"}
-            fill
+            height={250}
+            width={200}
             alt="Hakim"
             priority={true}
             className="object-cover"
