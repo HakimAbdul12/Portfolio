@@ -13,8 +13,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} flex`}>
-        <div className={` h-full`}><Sidebar/></div>
-        <div className={`h-screen overflow-y-scroll rounded-lg`}>{children}</div>
+        <div className={` h-full overflow-visible z-50 absolute sm:relative`}><Sidebar/></div>
+        <div className={`h-screen overflow-y-scroll`}>{children}</div>
       </body>
     </html>
   )

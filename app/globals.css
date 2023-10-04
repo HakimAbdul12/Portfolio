@@ -9,6 +9,9 @@
 .cont::-webkit-scrollbar{
     display: none;
 }
+body{
+    overscroll-behavior: none ;
+}
 #name{
     border: 0px;
 }
@@ -17,3 +20,89 @@
     inset: 0px;
     border: 0px;
 }
+
+.past{
+    animation-name: moveOn;
+    animation-duration: 5s;
+    left: -2.5rem;
+    animation-timing-function: linear;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+.incoming{
+    animation-timing-function: linear;
+    transition-property: all;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    z-index: 50;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    opacity: 1;
+    height: 200px;
+    box-shadow: 5px;
+    box-shadow: rgb(0, 0, 0);
+    top: 0rem;
+}
+.active{
+    animation-timing-function: linear;
+    transition-property: all;
+    left: 2.5rem;
+    position: absolute;
+    z-index: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    opacity: 0.5;
+    height: 180px;
+    top: 0.5rem;
+}
+/* wvae aniamtion start */
+#wavepath1{
+    animation-name: wave1;
+    animation-duration: 5s;
+    transition-property: all;
+    transition-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes wave1 {
+    from{
+        transform: translateY(70px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+#wavepath2{
+    animation-name: wave2;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes wave2 {
+    from{
+        transform: translateY(40px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+#wavepath3{
+    animation-name: wave2;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes wave3 {
+    from{
+        transform: translateY(30px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+/* wave animation end */

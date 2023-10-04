@@ -17,8 +17,8 @@ export default function Home() {
         <About/>
         <Experience/>
         <Project/>
-        <Socials/>
         <Contact/>
+        <Socials/>
       </main>
     </>
   );

@@ -2,11 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import { BiUser } from "react-icons/bi";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai"
 import { useState } from "react";
 
 
 export default function Page() {
   const [sneak, setSneak] = useState('translate-x-0');
+  const [view, setView] = useState(true);
   // cont [sneakStop, setSneakStop] =useState('');
 
   const stalking = () => {
@@ -14,6 +16,9 @@ export default function Page() {
   }
   const stopSneaking = () => {
     setSneak('translate-x-0')
+  }
+  const viewer = () =>{
+    setView((btn)=>(!btn))
   }
 
   return (
@@ -50,8 +55,8 @@ export default function Page() {
                   onBlur={stopSneaking}
                   className={`border-0 p-2 text-neutral-800 text-lg active:border-0 border-violet-500 bg-violet-500 active:bg-violet-500`}
                 />
-                <div className={`float-right px-2`}>
-                  <BiUser className="font-bold text-[40px] text-neutral-800" />
+                <div className={`float-right px-2`} onClick={viewer}>
+                  {view? <AiOutlineEyeInvisible className="font-bold text-[40px] text-neutral-800" />: <AiOutlineEye className="font-bold text-[40px] text-neutral-800"/>}
                 </div>{" "}
               </div>
             </form>
