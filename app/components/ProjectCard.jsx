@@ -18,8 +18,8 @@ export default function ProjectCard({ from, projectName, path }) {
         </Link>
       </div>
       <div className="sm:p-2 md:p-3 lg:p-3 xl:p-3 h-full sm:h-auto md:h-auto flex flex-col justify-center items-center w-1/2 sm:w-auto md:w-auto lg:w-auto xl:h-auto 2xl:w-auto">
-        <h1 className="text-sm sm:text-xl md:text-xl lg:text-xl xl:text-xl text-black text-center font-bold">{projectName}</h1>
-        <div className="flex justify-center">
+        <h1 className="text-sm sm:text-xl md:text-xl lg:text-xl xl:text-xl text-black text-center font-normal sm:font-bold md:font-bold lg:font-bold xl:font-bold 2xl:font-bold sm:h-[85px] md:h-[85px] lg:h-[85px] xl:h-[85px] 2xl:h-[85px]">{projectName}</h1>
+        <div className="flex justify-center items-center">
         <Link href={path}>
           <button className="rounded-sm sm:rounded-lg md:rounded-lg lg:rounded-lg xl:rounded-lg 2xl:rounded-lg text-white p-1 text-sm sm:p-3 md:p-3 lg:p-3 xl:p-3 2xl:p-3 md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] sm:text-[20px] bg-violet-600 hover:animate-bounce">
             Visit
