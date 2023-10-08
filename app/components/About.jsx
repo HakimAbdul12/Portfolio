@@ -7,13 +7,11 @@ export const About = () => {
       id="about"
       className="h-fit w-full lg:h-screen py-10 bg-violet-600 text-4xl flex justify-evenly gap-10 items-center flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap"
     >
-      <div className="object-cover">
+      <div className="object-cover w-full h-full relative">
         <Image
           src="/manWithBg.png"
-          height={500}
-          width={500}
+          fill
           alt="Me"
-          style={{ width: "600px", height: "auto" }}
         />
       </div>
       <div>

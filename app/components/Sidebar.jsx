@@ -5,11 +5,9 @@ import { FiMinimize } from "react-icons/fi";
 import { TbArrowsMaximize } from "react-icons/tb"
 import { IoSettingsOutline } from "react-icons/io5";
 import SidebarItem from "./SidebarItem";
-import { GoReport } from "react-icons/go";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import { BiSupport, BiMoneyWithdraw } from "react-icons/bi";
 import { LuLayoutDashboard } from "react-icons/lu";
-import { GiAutoRepair } from "react-icons/gi";
 import { AiOutlinePropertySafety } from "react-icons/ai";
 import SidebarContext from "./SidebarContext";
 import { IoIosRemove } from "react-icons/io"
@@ -84,8 +82,8 @@ export default function Sidebar() {
   }
   return (
     <>
-      <div className={`rounded-lg w-6 h-6 absolute transition-all text-4xl z-10 font-extrabold duration-300 opacity-75 cursor-pointer left-1 flex items-center justify-center`} onClick={collapse}>
-        {Collapse ? <GoMoveToEnd className="text-white font-bold" /> : <IoIosRemove className="text-white font-bold" />}
+      <div className={`rounded-lg w-6 h-6 absolute transition-all text-4xl z-10 font-extrabold duration-300 cursor-pointer -left-1 flex items-center justify-center ${toggler? "invisible":""}`} onClick={collapse}>
+        {Collapse ? <GoMoveToEnd className="text-black bg-white font-bold rounded-full" /> : <IoIosRemove className="text-black bg-white font-bold rounded-full" />}
       </div>
 
       <div className={`h-screen p-2 bg-violet-600 text-white shadow-lg shadow-violet-700 transition-all duration-300 overflow-visible z-50 space-y-4 ${toggler ? "w-[320px]" : (Collapse ? "w-0 p-0 hidden" : "w-[100px]")}`}>

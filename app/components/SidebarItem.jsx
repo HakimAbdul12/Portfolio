@@ -26,7 +26,7 @@ export default function SidebarItem({text, alert, icon}) {
   }
   return (
     <>
-      <li className={`${active === text ? "bg-gradient-to-tr from-violet-800 to-violet-600 ": ""}  ${toggler? "gap-3 hover:bg-violet-800 rounded":"hover:bg-violet-800 rounded-full shadow-lg hover:shadow-2xl hover:shadow-black"} rounded-full shadow-lg hover:shadow-sm hover:shadow-black flex relative cursor-pointer p-3  duration-300  hover:scale-110`} onClick={activeness} onMouseEnter={show} onMouseLeave={leave}>
+      <li className={`${active === text ? "bg-gradient-to-tr from-violet-800 to-violet-600 ": ""}  ${toggler? "gap-3 hover:bg-violet-800 rounded":"hover:bg-violet-800 rounded-full shadow-lg hover:shadow-2xl hover:shadow-black"} rounded-full shadow-lg hover:shadow-md hover:shadow-gray-700 flex relative cursor-pointer p-3  duration-300  hover:scale-110`} onClick={activeness} onMouseEnter={show} onMouseLeave={leave}>
             {icon}
             <h1 className={` font-bold text-gray-300 transition-all duration-300 ${toggler? "text-[18px] leading-8": "flex-0 w-[0px] text-[0px]"}`}>{text}</h1>
             {alert && (<div className={`${toggler? "":" top-0"} absolute h-2 rounded w-2 right-2 bg-green-400 mt-3`}></div>)}

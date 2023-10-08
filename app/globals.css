@@ -21,42 +21,8 @@ body{
     border: 0px;
 }
 
-.past{
-    animation-name: moveOn;
-    animation-duration: 5s;
-    left: -2.5rem;
-    animation-timing-function: linear;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
-}
-.incoming{
-    animation-timing-function: linear;
-    transition-property: all;
-    left: 0px;
-    right: 0px;
-    position: absolute;
-    z-index: 50;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
-    opacity: 1;
-    height: 200px;
-    box-shadow: 5px;
-    box-shadow: rgb(0, 0, 0);
-    top: 0rem;
-}
-.active{
-    animation-timing-function: linear;
-    transition-property: all;
-    left: 2.5rem;
-    position: absolute;
-    z-index: 0;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
-    opacity: 0.5;
-    height: 180px;
-    top: 0.5rem;
-}
+
+
 /* wvae aniamtion start */
 #wavepath1{
     animation-name: wave1;

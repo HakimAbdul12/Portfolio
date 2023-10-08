@@ -5,7 +5,7 @@ export const Socials = () => {
   return (
     <div
       id="socials"
-      className="h-fit w-full p-5 bg-violet-600"
+      className="h-screen w-full p-5 bg-violet-600"
     >
       <div className="flex flex-col justify-evenly">
         <div className="">
