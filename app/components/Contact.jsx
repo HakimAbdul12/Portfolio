@@ -22,7 +22,7 @@ const PushBackSocialIcon = () =>{
     <div id='contact' className='h-screen w-full bg-white text-4xl flex flex-wrap justify-evenly items-center'>
       <div>
         <div className={`relative justify-center items-center ${showing? "":""}`} onMouseEnter={showSocialIcons} onMouseLeave={PushBackSocialIcon}>
-          <IoShareSocialSharp className={`${showing? "rotate-[360deg] text-5xl shadow-none":"rotate-0"} cursor-pointer transition-all duration-500 text-6xl  absolute z-50 -left-2 -top-4 p-3 bg-violet-600 rounded-full text-white shadow-md shadow-black`}/>
+          <IoShareSocialSharp className={`${showing? "rotate-[360deg] text-5xl shadow-none":"rotate-0"} cursor-pointer transition-all duration-500 text-6xl  absolute z-10 -left-2 -top-4 p-3 bg-violet-600 rounded-full text-white shadow-md shadow-black`}/>
           <IoLogoFacebook className={`text-4xl text-blue-600 absolute transition-all cursor-pointer duration-500 ${showing? "-top-24 text-5xl":"top-0"}`}/>
           <IoLogoWhatsapp className={`text-4xl text-green-600 absolute transition-all cursor-pointer duration-500 ${showing? "-left-24 text-5xl":"left-0"}`}/>
           <FaSquareThreads className={`text-4xl absolute transition-all cursor-pointer duration-500 ${showing? "left-24 text-5xl":"left-0"}`}/>
