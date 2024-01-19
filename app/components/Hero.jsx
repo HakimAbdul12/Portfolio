@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Wave from "./Wave";
 
 const Hero = () => {
     let yearsOfExp = ''
@@ -9,17 +8,13 @@ const Hero = () => {
     yearsOfExp = currentYear - startYear;
 
 
-
-
   return (
+    <>
     <div
     id="home"
-      className="h-screen w-full bg-cover bg-no-repeat flex flex-col justify-between gap-0"
-      style={{
-        backgroundImage: `url('https://img.freepik.com/free-photo/close-up-image-programer-working-his-desk-office_1098-18707.jpg?w=1060&t=st=1695313283~exp=1695313883~hmac=6b5e4f2b6f585b01e2391732518fc81ca14eeb3128d5f35521c1466ae882b925')`,
-      }}
+      className="h-screen w-full bg-cover flex justify-center items-center gap-0 bg-white"
     >
-      <div className="w-full flex flex-col sm:flex-col-reverse md:flex-col-reverse lg:flex-row xl:flex-row 2xl:flex-row  justify-center items-end h-fit  bg-gradient-to-tr from-[#002b6b]/50 via-[#10011A]/50  to-[#070643]/50 overflow-hidden">
+      {/* <div className="w-full flex h-screen  sm:flex-col-reverse md:flex-col-reverse lg:flex-row xl:flex-row 2xl:flex-row  justify-center items-center overflow-hidden">
         <div className="h-fit basis-full space-y-20 pt-12">
           <h1 className="text-4xl text-white">
             🙋‍♂️ {`Hi, I'm`}{" "}
@@ -41,9 +36,10 @@ const Hero = () => {
             className="object-cover"
           />
         </div>
-      </div>
-      <Wave/>
+      </div> */}
+
     </div>
+    </>
   );
 };
 

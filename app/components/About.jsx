@@ -5,7 +5,7 @@ export const About = () => {
   return (
     <div
       id="about"
-      className="h-fit w-full lg:h-screen py-10 bg-violet-600 text-4xl flex justify-evenly gap-10 items-center flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap"
+      className="h-fit w-full lg:h-screen py-10 bg-white text-4xl flex justify-evenly gap-10 items-center flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap"
     >
       <div className="object-cover w-full h-full relative">
         <Image

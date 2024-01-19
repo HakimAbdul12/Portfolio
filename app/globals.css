@@ -72,3 +72,40 @@ body{
     }
 }
 /* wave animation end */
+
+
+/* TEXT BUBBLE ANIMATION */
+
+.niceText{
+    transition: 
+    0.35s font-weight,
+    0.35s color;
+}
+.niceText:hover{
+    font-weight: 900;
+    color: rgb(238, 242, 255);
+}
+
+    /*Selection to the right*/
+        /* when the text is hovered, select the next sibling to the right with class of niceText */
+.niceText:hover + .niceText{
+    font-weight: 500;
+    color: rgb(199, 210, 254);
+}
+
+        /* chain the selection to the select the second sibling to the right */
+.niceText:hover + .niceText + .niceText{
+    font-weight: 300;
+}
+    /*Selection to the left/*
+        /* now we use the has: to select the class of niceText that has a next sibling of niceText:hover */
+
+.niceText:has(+ .niceText:hover){
+    font-weight: 500;
+    color: rgb(199, 210, 254);
+}
+
+        /*now we select the text that has the next text having the class of niceText and that too have same class with hover*/
+.niceText:has(+ .niceText + .niceText:hover){
+    font-weight: 300;
+}

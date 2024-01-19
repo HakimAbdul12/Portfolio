@@ -1,0 +1,46 @@
+{
+    "tickets": [
+      {
+        "id": 1,
+        "title": "Technological Advancement",
+        "body": "The rapid advancement of technology in recent years has transformed the way we live and work. From the proliferation of smartphones to the rise of artificial intelligence, our daily lives are increasingly intertwined with technology. This digital revolution has brought both opportunities and challenges. It has made information more accessible than ever before, enabling global connectivity and innovative solutions. However, it has also raised concerns about privacy, security, and the impact of automation on employment. As we navigate this ever-evolving landscape, striking a balance between harnessing the benefits of technology and addressing its associated risks remains a pressing societal goal.",
+        "color": "danger"
+      },
+      {
+        "id": 2,
+        "title": "Environmental Conservation",
+        "body": "In the realm of environmental conservation, urgent action is needed to address the escalating challenges of climate change and biodiversity loss. Rising global temperatures, extreme weather events, and the loss of critical habitats are all signs of the planet's ecological distress. To mitigate these issues, international cooperation is paramount, with nations working together to reduce carbon emissions and protect vulnerable ecosystems. Additionally, fostering sustainable practices in agriculture, energy production, and transportation is crucial for a more resilient and environmentally responsible future. In the face of these environmental crises, individuals, communities, and governments must prioritize conservation efforts to ensure a habitable planet for future generations.",
+        "color": "primary"
+      },
+      {
+        "id": 3,
+        "title": "World Of Healthcare",
+        "body": "In the world of healthcare, recent advancements in medical technology and research have the potential to revolutionize patient care. Breakthroughs in genomics, telemedicine, and precision medicine are changing how diseases are diagnosed and treated. Telehealth platforms are making healthcare more accessible, especially in remote or underserved areas. Furthermore, the development of personalized treatments based on an individual's genetic makeup holds promise for more effective and targeted therapies. While these innovations bring hope, they also raise ethical and privacy concerns that must be carefully addressed. As we continue to embrace these changes, the healthcare industry is on the brink of a transformative era that could improve the well-being of people worldwide.",
+        "color": "success"
+      },
+      {
+        "id": 4,
+        "title": "Lionel Messi",
+        "body": "Lionel Messi, often hailed as one of the greatest footballers of all time, continues to mesmerize fans worldwide with his extraordinary skills. Born in Argentina in 1987, Messi's journey from a young prodigy at Barcelona's La Masia academy to his historic transfer to Paris Saint-Germain in 2021 has been nothing short of legendary. With numerous Ballon d'Or awards to his name and countless records shattered, Messi's impact on the beautiful game is undeniable. His dribbling, vision, and goal-scoring prowess have made him a true icon in the world of football, inspiring aspiring players and captivating enthusiasts with every touch of the ball. As he enters the later stages of his career, the magic of Messi on the pitch continues to amaze and inspire generations of football fans.",
+        "color": "danger"
+      },
+      {
+        "title": "Tectacle",
+        "body": "key={ticket.id}",
+        "color": "danger",
+        "id": 5
+      },
+      {
+        "title": "The act of refresh",
+        "body": "The power of prayer has become something that many people still debate about today.",
+        "color": "primary",
+        "id": 6
+      },
+      {
+        "title": "Eno mary",
+        "body": "Thanks to this course, I now have the skills to pursue a career in programming.",
+        "color": "success",
+        "id": 7
+      }
+    ]
+  }

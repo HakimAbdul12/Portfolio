@@ -19,7 +19,7 @@ const PushBackSocialIcon = () =>{
 }
 
   return (
-    <div id='contact' className='h-screen w-full bg-white text-4xl flex flex-wrap justify-evenly items-center'>
+    <div id='contact' className='h-screen w-full bg-white text-4xl flex flex-wrap justify-center items-center'>
       <div>
         <div className={`relative justify-center items-center ${showing? "":""}`} onMouseEnter={showSocialIcons} onMouseLeave={PushBackSocialIcon}>
           <IoShareSocialSharp className={`${showing? "rotate-[360deg] text-5xl shadow-none":"rotate-0"} cursor-pointer transition-all duration-500 text-6xl  absolute z-10 -left-2 -top-4 p-3 bg-violet-600 rounded-full text-white shadow-md shadow-black`}/>
