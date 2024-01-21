@@ -4,6 +4,10 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Settings from "./components/Settings";
 import { DarkModeProvider } from "./components/DarkModeContext";
+import { NavigationContextProvider } from "./components/context/NavigationContext";
+import { SidebarCollapeContextProvider } from "./components/context/SidebarCollapeContext";
+import SidebarCollapseButton from "./components/SidebarCollapseButton";
+import { SidebarContextProvider } from "./components/SidebarContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,16 +19,29 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <DarkModeProvider>
-      <html lang="en" className="scroll-smooth">
-        <body className={`${inter.className} flex relative`}>
-          <div className={` h-full overflow-visible z-50 absolute sm:relative`}>
-            <Sidebar />
-          </div>
-          <div className={`h-screen overflow-y-scroll`}>{children}</div>
-          <Header />
-          <Settings />
-        </body>
-      </html>
+      <NavigationContextProvider>
+        <SidebarCollapeContextProvider>
+          <SidebarContextProvider>
+        <html
+          lang="en"
+          className="scroll-smooth overflow-hidden w-[100%] h-fit"
+        >
+          
+          <body
+            className={`${inter.className} flex relative w-full h-[100%] overflow-hidden`}
+          >
+            <SidebarCollapseButton/>
+            <div className={`h-full overflow-visible z-40 absolute`}>
+              <Sidebar />
+            </div>
+            <div className={`h-screen w-full overflow-y-auto`}>{children}</div>
+            <Header />
+            <Settings />
+          </body>
+        </html>
+        </SidebarContextProvider>
+        </SidebarCollapeContextProvider>
+      </NavigationContextProvider>
     </DarkModeProvider>
   );
 }

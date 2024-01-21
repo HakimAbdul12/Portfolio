@@ -109,3 +109,38 @@ body{
 .niceText:has(+ .niceText + .niceText:hover){
     font-weight: 300;
 }
+
+.noisy-overlay{
+    animation-duration: 150s;
+    animation-timing-function: linear;
+    animation-name: noise;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes noise {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.goUp{
+    transform: translateY(-100px);
+    transition-duration: 400ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+.goDown{
+    transform: translateY(0px);
+    transition-duration: 400ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+.sidebarInvisible{
+    transform: translateX(-700px);
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+.sidebarVisible{
+    transform: translateX(0px);
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}

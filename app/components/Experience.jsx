@@ -1,14 +1,39 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import LanguageImage from "./LanguageImage";
+import { useDarkMode } from "./DarkModeContext";
 
 
 export const Experience = () => {
+  const { darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } =
+  useDarkMode();
   return (
     <div
       id="experience"
-      className="h-screen w-fit languages bg-white text-4xl justify-center items-center sm:p-5 md:p-5"
+      className="h-screen w-full bg-white text-4xl overflow-y-auto gap-3"
+      style={{
+        backgroundImage: darkMode ? 'url("/grid.jpg")' : "",
+        backgroundSize: "cover", // Adjust as needed
+        // Add other background properties as needed
+      }}
     >
+      {/* overlay start */}
+      <div
+        className={` ${darkMode? "":"hidden"} absolute h-screen w-full bg-gradient-to-br from-gray-800 via-gray-700 to-purple-500 opacity-20 pointer-events-none`}
+      ></div>
+      <div
+        className={`absolute h-[400%] w-[400%] pointer-events-none opacity-[0.02] bg-no-repeat z-30 bg-center noisy-overlay ${
+          darkMode ? "visible" : "invisible"
+        }`}
+        style={{
+          backgroundImage: darkMode ? 'url("/noisy.jpg")' : "",
+          backgroundSize: "cover", // Adjust as needed
+          // Add other background properties as needed
+        }}
+      ></div>
+      {/* overlay end */}
+
       <div className={`text-5xl grid place-content-center text-center text-black font-bold py-11 h-fit`}>
         <TextAnimation/>
       </div>

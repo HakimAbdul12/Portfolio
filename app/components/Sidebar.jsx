@@ -10,11 +10,17 @@ import { BiSupport, BiMoneyWithdraw } from "react-icons/bi";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { AiOutlinePropertySafety } from "react-icons/ai";
 import SidebarContext from "./SidebarContext";
-import { useDarkMode } from './DarkModeContext';
+import { useDarkMode } from './DarkModeContext'
+import { useHeaderIsUp } from "./context/NavigationContext";
+import { useCollapse } from "./context/SidebarCollapeContext";
+import { useToggler } from "./SidebarContext";
+
 
 export default function Sidebar() {
-  const [toggler, setToggler] = useState(false);
   const {darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } = useDarkMode();
+  const {headerShouldDropDown} = useHeaderIsUp();
+  const {collapse, funcSetCollapse, hardCodeCollapseToFalse} = useCollapse();
+  const {toggler,toggle} = useToggler();
 
   //icons and their names
 
@@ -50,14 +56,11 @@ export default function Sidebar() {
     },
   ];
 
-  const toggle = () => {
-    setToggler((btn) => (!btn))
-  }
+
 
   return (
     <>
-
-      <div className={`h-screen p-2 ${darkMode? "bg-slate-950":"bg-violet-600"} text-white shadow-lg shadow-slate-700 transition-all duration-300 overflow-visible z-50 space-y-4 ${toggler ? "w-[320px]" : "w-[100px]"}`}>
+      <div className={`h-screen p-2 border-r border-gray-600 ${darkMode? "bg-slate-950 shadow-xl shadow-black":"bg-violet-600 shadow-md shadow-black"} text-white transition-all duration-400 overflow-visible z-40 space-y-4 ${toggler ? "w-[320px]" : collapse? "w-[0px] hidden": "w-[100px]"} ${headerShouldDropDown? "sidebarInvisible hidden":"sidebarVisible"}`}>
         <div className=" py-2 mb-2">
           <div className={`flex transition-all duration-300 ${toggler ? "justify-between" : "justify-center"}`}>
             <Image
@@ -69,17 +72,17 @@ export default function Sidebar() {
               className={`${toggler ? "w-20" : "w-0"} transition-all`}
             />
             <div className="icon" onClick={toggle}>
-              {toggler ? <FiMinimize className="text-purple-300 text-xl cursor-pointer" /> : <TbArrowsMaximize className="text-purple-300 text-2xl cursor-pointer" />}
+              {toggler ? <FiMinimize className={`text-purple-300 text-2xl cursor-pointer`} /> : <TbArrowsMaximize className={`text-purple-300 cursor-pointer ${collapse?" text-[0px] ":"text-2xl"}`} />}
             </div>
           </div>
         </div>
-        <SidebarContext.Provider value={{ toggler }}>
+        {/* <SidebarContext.Provider value={{ toggler }}> */}
           <ul className="flex h-[80vh] flex-col rounded-sm p-3 space-y-5 cont justify-center">
             {sidebarItems.map((Element) => (
               <SidebarItem key={Element.text} text={Element.text} alert={Element.alert} icon={Element.icon} />
             ))}
           </ul>
-        </SidebarContext.Provider>
+        {/* </SidebarContext.Provider> */}
       </div>
     </>
   ); 

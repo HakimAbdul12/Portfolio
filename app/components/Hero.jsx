@@ -1,20 +1,45 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { useDarkMode } from "./DarkModeContext";
 
 const Hero = () => {
-    let yearsOfExp = ''
-    const startYear = 2022;
-    const currentYear = new Date().getFullYear();
-    yearsOfExp = currentYear - startYear;
+  let yearsOfExp = "";
+  const startYear = 2022;
+  const currentYear = new Date().getFullYear();
+  yearsOfExp = currentYear - startYear;
 
+  const { darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } =
+    useDarkMode();
 
   return (
     <>
-    <div
-    id="home"
-      className="h-screen w-full bg-cover flex justify-center items-center gap-0 bg-white"
-    >
-      {/* <div className="w-full flex h-screen  sm:flex-col-reverse md:flex-col-reverse lg:flex-row xl:flex-row 2xl:flex-row  justify-center items-center overflow-hidden">
+      <div
+        id="home"
+        className="h-screen w-full bg-white text-4xl flex justify-center items-center gap-3 flex-wrap sm:flex-nowrap md:flex-nowrap xl:flex-nowrap lg:flex-nowrap"
+        style={{
+          backgroundImage: darkMode ? 'url("/grid.jpg")' : "",
+          backgroundSize: "cover", // Adjust as needed
+          // Add other background properties as needed
+        }}
+      >
+        {/* overlay start */}
+        <div
+          className={`${darkMode? "opacity-0":"hidden opacity-0"} absolute h-screen w-full bg-gradient-to-br from-gray-800 via-gray-700 to-purple-500 opacity-20 pointer-events-none`}
+        ></div>
+        <div
+          className={`absolute h-[400%] w-[400%] pointer-events-none opacity-[0.02] bg-no-repeat z-30 bg-center noisy-overlay ${
+            darkMode ? "visible" : "invisible"
+          }`}
+          style={{
+            backgroundImage: darkMode ? 'url("/noisy.jpg")' : "",
+            backgroundSize: "cover", // Adjust as needed
+            // Add other background properties as needed
+          }}
+        ></div>
+        {/* overlay end */}
+
+        {/* <div className="w-full flex h-screen  sm:flex-col-reverse md:flex-col-reverse lg:flex-row xl:flex-row 2xl:flex-row  justify-center items-center overflow-hidden">
         <div className="h-fit basis-full space-y-20 pt-12">
           <h1 className="text-4xl text-white">
             🙋‍♂️ {`Hi, I'm`}{" "}
@@ -37,8 +62,7 @@ const Hero = () => {
           />
         </div>
       </div> */}
-
-    </div>
+      </div>
     </>
   );
 };

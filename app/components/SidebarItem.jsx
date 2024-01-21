@@ -2,11 +2,13 @@
 import { useContext, useState, useEffect } from "react"
 import SidebarContext from "./SidebarContext"
 import { useDarkMode } from './DarkModeContext';
+import { useToggler } from "./SidebarContext";
 
 export default function SidebarItem({text, alert, icon}) {
   let [active, setActive] = useState("Dashboard");
   let [showing, setShowing] = useState(false);
   const {darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } = useDarkMode();
+  const { toggler, toggle} = useToggler();
 
   const activeness = () =>{
     setActive(()=>{
@@ -15,7 +17,6 @@ export default function SidebarItem({text, alert, icon}) {
       return active
     })
   }
-  const {toggler} = useContext(SidebarContext);
   const show = ()=>{
     if(toggler === false){
       setShowing(true)
