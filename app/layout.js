@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           <SidebarContextProvider>
         <html
           lang="en"
-          className="scroll-smooth overflow-hidden w-[100%] h-fit"
+          className="overflow-hidden w-[100%] h-[100%]"
         >
           
           <body
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             <div className={`h-full overflow-visible z-40 absolute`}>
               <Sidebar />
             </div>
-            <div className={`h-screen w-full overflow-y-auto`}>{children}</div>
+            <div className={`h-full w-full overflow-y-auto`}>{children}</div>
             <Header />
             <Settings />
           </body>

@@ -1,15 +1,14 @@
-"use client";
-import React from "react";
+"use client"
 import Image from "next/image";
 import { useDarkMode } from "./DarkModeContext";
 
 export const About = () => {
-  const { darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } =
+  var { darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } =
     useDarkMode();
   return (
     <div
       id="about"
-      className="w-full h-screen py-10 bg-white text-4xl flex justify-evenly gap-10 items-center flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap overflow-y-auto"
+      className="w-full min-h-screen py-10  text-4xl flex justify-evenly gap-10 items-center flex-wrap sm:flex-wrap md:flex-wrap lg:flex-nowrap overflow-y-auto"
       style={{
         backgroundImage: darkMode ? 'url("/grid.jpg")' : "",
         backgroundSize: "cover", // Adjust as needed

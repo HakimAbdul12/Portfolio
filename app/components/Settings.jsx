@@ -37,7 +37,7 @@ export default function Settings() {
     }
   return (
     <>
-    <div className={'fixed p-0 z-30 top-[94%] left-[94%] flex'}>
+    <div className={'fixed p-0 z-30 top-[94%] left-[90%] sm:left-[92%] flex'}>
       <IoSettings className={`${settingsoOn? "rotate-180 scale-105":"rotate-0"} ${darkMode? "text-white":"text-violet-600" } text-3xl lg:text-4xl cursor-pointer transition-all duration-300`} onClick={toggleSettings}/>
       <div className={`${darkMode? "bg-slate-950":"bg-violet-600"} ${settingsoOn? "h-fit": "h-0 w-0 opacity-0"}  z-40 absolute right-[100%] mr-3 mt-4 rounded-md p-5 bottom-9 transition-all duration-300`}>
         <div className={`flex gap-3 justify-center items-center cursor-pointer text-white font-semibold ${settingsoOn? "": "h-0 w-0 opacity-0"}`}>
@@ -49,9 +49,9 @@ export default function Settings() {
         </div>
       </div>
     </div>
-    <div className={`fixed p-0 z-30 top-[87%] left-[94%]`} onClick={toggleSocialMedia}>
+    <div className={`fixed p-0 z-30 top-[88%] left-[90%] sm:left-[92%]`} onClick={toggleSocialMedia}>
       <div className={`relative`}>
-        <IoShareSocialSharp className={`${showing? "rotate-180 shadow-none scale-105":"rotate-0"} ${darkMode? "bg-white":"bg-violet-600"} text-[2.1rem] text-slate-950 cursor-pointer transition-all duration-300 p-2 absolute z-30 rounded-full`}/>
+        <IoShareSocialSharp className={`${showing? "rotate-180 shadow-none scale-105":"rotate-0"} ${darkMode? "bg-white":"bg-violet-600"} text-[30px] text-slate-950 cursor-pointer transition-all duration-300 p-2 absolute z-30 rounded-full`}/>
         <IoLogoWhatsapp className={` text-green-600 absolute transition-all cursor-pointer duration-500 z-10 ${showing? "text-[2.1rem] right-9 opacity-100 mt-0":"text-[0.25rem] opacity-0 mt-3 ml-3"}`}/>
         <FaSkype className={` text-blue-700 absolute transition-all cursor-pointer duration-500 z-10 ${showing?"text-[2.1rem] right-7 bottom-5 opacity-100 mt-0":"text-[0.25rem] opacity-0 mt-3 ml-3"}`}/>
         <IoLogoLinkedin className={` text-blue-400 absolute transition-all cursor-pointer duration-500 z-10 ${showing?"text-[2.1rem] bottom-9 opacity-100 mt-0":"text-[0.25rem] opacity-0 mt-3 ml-3"}`}/>

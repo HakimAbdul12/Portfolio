@@ -3,6 +3,7 @@ import { createContext, useContext, useLayoutEffect, useState } from "react";
 const NavigationContext = createContext();
 
 export const NavigationContextProvider = ({ children }) => {
+
     const [headerShouldDropDown, setDrop] = useState(false);
 
     useLayoutEffect(() => {

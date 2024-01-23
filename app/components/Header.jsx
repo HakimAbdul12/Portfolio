@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={`${darkMode? "bg-slate-950 shadow-lg shadow-black border border-gray-500": "bg-violet-600 shadow-md shadow-black"} w-3/5 h-fit py-3 px-8 fixed z-50 rounded-br-[50px] rounded-bl-[50px] left-[20%] ${headerShouldDropDown ? "goDown" : "goUp"}`}>
+      <header className={`${darkMode? "bg-slate-950 shadow-lg shadow-black border border-gray-500": "bg-violet-600 shadow-md shadow-black"} w-[70%] h-fit py-3 px-8 fixed z-50 rounded-br-[50px] rounded-bl-[50px] left-[15%] ${headerShouldDropDown ? "goDown" : "goUp"}`}>
         <nav>
           <ul className="flex justify-around">
             {navs.map((navItem, idx) => (

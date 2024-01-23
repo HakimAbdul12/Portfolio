@@ -2,7 +2,7 @@
 import { useCollapse } from "./context/SidebarCollapeContext";
 import { useDarkMode } from "./DarkModeContext";
 import { useToggler } from "./SidebarContext";
-import { BsArrowsCollapseVertical } from "react-icons/bs";
+import { LuMoveHorizontal } from "react-icons/lu";
 import { useHeaderIsUp } from "./context/NavigationContext";
 
 export default function SidebarCollapseButton ()  {
@@ -11,6 +11,7 @@ export default function SidebarCollapseButton ()  {
     useDarkMode();
     const {toggler,toggle} = useToggler();
     const {headerShouldDropDown} = useHeaderIsUp();
+    console.log(headerShouldDropDown);
 
 
   return (
@@ -21,7 +22,7 @@ export default function SidebarCollapseButton ()  {
         }  shadow-sm shadow-black rounded-br-[20px] flex justify-center items-center ${collapse? "h-[35px] w-[35px]": toggler? "hidden":"h-[35px] w-[35px]"} ${headerShouldDropDown? "hidden":""}`}
         onClick={funcSetCollapse}
       >
-      <BsArrowsCollapseVertical className={`font-bold ${collapse? "rotate-180":"rotate-0"} transition-all duration-300`} />
+      <LuMoveHorizontal className={`font-bold ${collapse? "rotate-180":"rotate-0"} transition-all duration-300`} />
       </div>
     </>
   );
