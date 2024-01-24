@@ -83,31 +83,31 @@ body{
 }
 .niceText:hover{
     font-weight: 900;
-    color: rgb(238, 242, 255);
+    color: rgb(25, 32, 45);
 }
 
     /*Selection to the right*/
         /* when the text is hovered, select the next sibling to the right with class of niceText */
 .niceText:hover + .niceText{
-    font-weight: 500;
-    color: rgb(199, 210, 254);
+    font-weight: 800;
+    color: rgb(37, 43, 57);
 }
 
         /* chain the selection to the select the second sibling to the right */
 .niceText:hover + .niceText + .niceText{
-    font-weight: 300;
+    font-weight: 700;
 }
     /*Selection to the left/*
         /* now we use the has: to select the class of niceText that has a next sibling of niceText:hover */
 
 .niceText:has(+ .niceText:hover){
-    font-weight: 500;
-    color: rgb(199, 210, 254);
+    font-weight: 800;
+    color: rgb(17,24,39);
 }
 
         /*now we select the text that has the next text having the class of niceText and that too have same class with hover*/
 .niceText:has(+ .niceText + .niceText:hover){
-    font-weight: 300;
+    font-weight: 700;
 }
 
 .noisy-overlay{
@@ -122,18 +122,7 @@ body{
         transform: rotate(360deg);
     }
 }
-.goUp{
-    transform: translateY(-100px);
-    transition-duration: 400ms;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-}
-.goDown{
-    transform: translateY(0px);
-    transition-duration: 400ms;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-}
+
 .sidebarInvisible{
     transform: translateX(-700px);
     transition-property: all;

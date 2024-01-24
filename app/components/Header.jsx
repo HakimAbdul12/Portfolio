@@ -1,17 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import { useDarkMode } from './DarkModeContext';
-import { useHeaderIsUp } from "./context/NavigationContext";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const {darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } = useDarkMode();
   const [active, setActive] = useState("Home");
-  const {headerShouldDropDown} = useHeaderIsUp();
+  const pathname = usePathname();
+
+useLayoutEffect(()=>{
+  const matchingNavItem = navs.find((navItem) => navItem.url === pathname);
+    if (matchingNavItem) {
+      setActive(matchingNavItem.title);
+    }
+},[])
 
   return (
     <>
-      <header className={`${darkMode? "bg-slate-950 shadow-lg shadow-black border border-gray-500": "bg-violet-600 shadow-md shadow-black"} w-[70%] h-fit py-3 px-8 fixed z-50 rounded-br-[50px] rounded-bl-[50px] left-[15%] ${headerShouldDropDown ? "goDown" : "goUp"}`}>
+      <header className={`${darkMode? "bg-slate-950 shadow-lg shadow-black border border-gray-500": "bg-violet-600 shadow-md shadow-black"} w-[70%] h-fit py-3 px-8 fixed z-50 rounded-br-[50px] transition-all duration-300 rounded-bl-[50px] left-[15%] -translate-y-[100px] lg:translate-y-[0px]`}>
         <nav>
           <ul className="flex justify-around">
             {navs.map((navItem, idx) => (

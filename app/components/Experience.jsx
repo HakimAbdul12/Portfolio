@@ -11,28 +11,13 @@ export const Experience = () => {
   return (
     <div
       id="experience"
-      className="h-screen w-full bg-white text-4xl overflow-y-auto gap-3"
+      className="h-screen w-full  text-4xl overflow-y-auto gap-3 py-3 lg:py-20"
       style={{
-        backgroundImage: darkMode ? 'url("/grid.jpg")' : "",
+        backgroundImage: darkMode ? 'url("/grid.jpg")' : 'url("/whitebg1.jpg")',
         backgroundSize: "cover", // Adjust as needed
         // Add other background properties as needed
       }}
     >
-      {/* overlay start */}
-      <div
-        className={` ${darkMode? "":"hidden"} absolute h-screen w-full bg-gradient-to-br from-gray-800 via-gray-700 to-purple-500 opacity-20 pointer-events-none`}
-      ></div>
-      <div
-        className={`absolute h-[400%] w-[400%] pointer-events-none opacity-[0.02] bg-no-repeat z-30 bg-center noisy-overlay ${
-          darkMode ? "visible" : "invisible"
-        }`}
-        style={{
-          backgroundImage: darkMode ? 'url("/noisy.jpg")' : "",
-          backgroundSize: "cover", // Adjust as needed
-          // Add other background properties as needed
-        }}
-      ></div>
-      {/* overlay end */}
 
       <div className={`text-5xl grid place-content-center text-center text-black font-bold py-11 h-fit`}>
         <TextAnimation/>
@@ -98,8 +83,10 @@ export const Experience = () => {
 };  
 
  const TextAnimation = () => {
+  const { darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } =
+  useDarkMode();
   return (
-    <h2 className="text-center text-5xl font-thin text-indigo-200 cursor-pointer">
+    <h2 className={`text-center text-5xl font-semibold ${darkMode? "text-white":"text-gray-800"} cursor-pointer`}>
       {'Proficient languages and frameworks'.split('').map((child, idx)=>(
         <span className="niceText" key={idx}>
           {child}

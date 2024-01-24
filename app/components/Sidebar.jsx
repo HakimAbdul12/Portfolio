@@ -9,16 +9,13 @@ import { BsFillChatDotsFill } from "react-icons/bs";
 import { BiSupport, BiMoneyWithdraw } from "react-icons/bi";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { AiOutlinePropertySafety } from "react-icons/ai";
-import SidebarContext from "./SidebarContext";
 import { useDarkMode } from './DarkModeContext'
-import { useHeaderIsUp } from "./context/NavigationContext";
 import { useCollapse } from "./context/SidebarCollapeContext";
 import { useToggler } from "./SidebarContext";
 
 
 export default function Sidebar() {
   const {darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } = useDarkMode();
-  const {headerShouldDropDown} = useHeaderIsUp();
   const {collapse, funcSetCollapse, hardCodeCollapseToFalse} = useCollapse();
   const {toggler,toggle} = useToggler();
 
@@ -60,7 +57,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className={`h-screen p-2 border-r border-gray-600 ${darkMode? "bg-slate-950 shadow-xl shadow-black":"bg-violet-600 shadow-md shadow-black"} text-white transition-all duration-400 overflow-visible z-40 space-y-4 ${toggler ? "w-[320px]" : collapse? "w-[0px] hidden": "w-[100px]"} ${headerShouldDropDown? "sidebarInvisible hidden":"sidebarVisible"}`}>
+      <div className={`h-screen p-2 border-r border-gray-600 ${darkMode? "bg-slate-950 shadow-xl shadow-black":"bg-violet-600 shadow-md shadow-black"} text-white transition-all duration-300 overflow-visible z-40 space-y-4 ${toggler ? "w-[320px]" : collapse? "w-[0px] hidden": "w-[100px]"} translate-x-0 lg:translate-x-[-700px]`}>
         <div className=" py-2 mb-2">
           <div className={`flex transition-all duration-300 ${toggler ? "justify-between" : "justify-center"}`}>
             <Image
