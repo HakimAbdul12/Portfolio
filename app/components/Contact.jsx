@@ -1,9 +1,11 @@
 "use client";
 import { useDarkMode } from "./DarkModeContext";
+import { useCollapse } from "./context/SidebarCollapeContext";
 
 export const Contact = () => {
   const { darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } =
     useDarkMode();
+    const { collapse, funcSetCollapse, hardCodeCollapseToFalse } = useCollapse();
 
   return (
     <div
@@ -14,6 +16,7 @@ export const Contact = () => {
         backgroundSize: "cover", // Adjust as needed
         // Add other background properties as needed
       }}
+      onClick={hardCodeCollapseToFalse}
     >
       <form action="" className={`w-[70%]`}>
         <div

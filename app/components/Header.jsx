@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const {darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } = useDarkMode();
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("Welcome");
   const pathname = usePathname();
 
 useLayoutEffect(()=>{
@@ -38,7 +38,7 @@ useLayoutEffect(()=>{
 }
 
 const navs = [
-  { url: "/", title: "Home" },
+  { url: "/", title: "Welcome" },
   { url: "/aboutme", title: "About" },
   { url: "/experience", title: "Experience" },
   { url: "/projects", title: "Projects" },

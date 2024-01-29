@@ -19,6 +19,7 @@ export default function Sidebar() {
   const {collapse, funcSetCollapse, hardCodeCollapseToFalse} = useCollapse();
   const {toggler,toggle} = useToggler();
 
+
   //icons and their names
 
   const sidebarItems = [
@@ -57,8 +58,8 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className={`h-screen p-2 border-r border-gray-600 ${darkMode? "bg-slate-950 shadow-xl shadow-black":"bg-violet-600 shadow-md shadow-black"} text-white transition-all duration-300 overflow-visible z-40 space-y-4 ${toggler ? "w-[320px]" : collapse? "w-[0px] hidden": "w-[100px]"} translate-x-0 lg:translate-x-[-700px]`}>
-        <div className=" py-2 mb-2">
+      <div className={`h-screen p-2 border-r border-gray-600 ${darkMode? "bg-slate-950 shadow-xl shadow-black":"bg-violet-600 shadow-md shadow-black"} text-white transition-all duration-300 overflow-visible z-40 space-y-4 ${toggler ? "w-[320px]" : collapse? "w-[0px] hidden": "w-[100px]"} translate-x-0 lg:translate-x-[-700px] `}>
+        <div className="sm:py-2 sm:mb-2">
           <div className={`flex transition-all duration-300 ${toggler ? "justify-between" : "justify-center"}`}>
             <Image
               alt="logo"
@@ -74,7 +75,7 @@ export default function Sidebar() {
           </div>
         </div>
         {/* <SidebarContext.Provider value={{ toggler }}> */}
-          <ul className="flex h-[80vh] flex-col rounded-sm p-3 space-y-5 cont justify-center">
+          <ul className="flex h-[80vh] flex-col rounded-sm p-2 sm:p-3 space-y-5 cont justify-center">
             {sidebarItems.map((Element) => (
               <SidebarItem key={Element.text} text={Element.text} alert={Element.alert} icon={Element.icon} />
             ))}

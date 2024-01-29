@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
 import { useDarkMode } from "./DarkModeContext";
+import { useCollapse } from "./context/SidebarCollapeContext";
 
 export const About = () => {
   const { darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } =
     useDarkMode();
+    const { collapse, funcSetCollapse, hardCodeCollapseToFalse } = useCollapse();
   return (
     <div
       id="about"
@@ -14,6 +16,7 @@ export const About = () => {
         backgroundSize: "cover", // Adjust as needed
         // Add other background properties as needed
       }}
+      onClick={hardCodeCollapseToFalse}
     >
       <div className="object-cover basis-6/12 h-full flex justify-center">
         <Image

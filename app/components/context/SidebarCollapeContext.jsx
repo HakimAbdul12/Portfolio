@@ -5,6 +5,7 @@ const SidebarCollapeContext = createContext();
 export const SidebarCollapeContextProvider = ({ children }) => {
 
   const [collapse, setCollapse] = useState(false);
+  const [expandedBarCollape, setExpandedSidebarCollape] = useState(false);
 
   const funcSetCollapse = () => {
     setCollapse((btn) => !btn);

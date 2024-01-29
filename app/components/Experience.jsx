@@ -3,11 +3,14 @@ import React from "react";
 import Image from "next/image";
 import LanguageImage from "./LanguageImage";
 import { useDarkMode } from "./DarkModeContext";
+import { useCollapse } from "./context/SidebarCollapeContext";
 
 
 export const Experience = () => {
   const { darkMode, toggleDarkMode, hardCodeFalse, hardCodeTrue } =
   useDarkMode();
+  const { collapse, funcSetCollapse, hardCodeCollapseToFalse } = useCollapse();
+
   return (
     <div
       id="experience"
@@ -17,6 +20,7 @@ export const Experience = () => {
         backgroundSize: "cover", // Adjust as needed
         // Add other background properties as needed
       }}
+      onClick={hardCodeCollapseToFalse}
     >
 
       <div className={`text-5xl grid place-content-center text-center text-black font-bold py-11 h-fit`}>
